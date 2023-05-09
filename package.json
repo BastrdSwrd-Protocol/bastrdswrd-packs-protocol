@@ -1,0 +1,63 @@
+{
+  "name": "pack-protocol",
+  "description": "",
+  "version": "1.0.0",
+  "dependencies": {
+    "@chainlink/contracts": "^0.2.1",
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "@openzeppelin/contracts": "^4.3.2"
+  },
+  "devDependencies": {
+    "@ethersproject/abstract-signer": "^5.1.0",
+    "@ethersproject/bignumber": "^5.1.1",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@typechain/ethers-v5": "^7.1.0",
+    "@typechain/hardhat": "^2.3.0",
+    "@types/chai": "^4.2.13",
+    "@types/fs-extra": "^9.0.1",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "chai": "^4.2.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.4.6",
+    "fs-extra": "^10.0.0",
+    "hardhat": "^2.6.4",
+    "hardhat-abi-exporter": "^2.3.0",
+    "hardhat-gas-reporter": "^1.0.4",
+    "husky": "^7.0.2",
+    "mocha": "^9.1.1",
+    "prettier": "^2.4.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "ts-node": "^10.2.1",
+    "typechain": "^5.1.2",
+    "typescript": "4.4.3"
+  },
+  "files": [
+    "/contracts"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "deploy-protocol": "hardhat run scripts/deploy/protocol.ts",
+    "deploy-rewards": "hardhat run scripts/deploy/rewards.ts",
+    "deploy-pack": "hardhat run scripts/deploy/pack.ts",
+    "deploy-market": "hardhat run scripts/deploy/market.ts",
+    "createPackAtomic": "hardhat run scripts/txs/createPackAtomic.ts",
+    "openPack": "hardhat run scripts/txs/openPack.ts",
+    "verify-protocol": "hardhat run tasks/verify/protocol.ts",
+    "verify-pack": "hardhat run tasks/verify/pack.ts",
+    "verify-market": "hardhat run tasks/verify/market.ts",
+    "verify-rewards": "hardhat run tasks/verify/rewards.ts",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{js,json,md,sol,ts}\"",
+    "prettier:list-different": "prettier --config .prettierrc --list-different \"**/*.{js,json,md,sol,ts}\"",
+    "test": "hardhat test",
+    "typechain": "hardhat typechain"
+  }
+}
